@@ -74,7 +74,7 @@ def clone_or_update(config, url, path, head):
     if 'GITHUB_OAUTH_TOKEN' in config:
         authenticated_clone(config, url, path)
     else:
-        buildlog.warn('No github oauth token present. Using public clone.')
+        buildlog.warning('No github oauth token present. Using public clone.')
         clone(url, path)
     buildlog.info("Checking out '%s'", head)
     checkout(path, head)

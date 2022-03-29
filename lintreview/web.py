@@ -55,9 +55,9 @@ def start_review():
         lintrc = get_lintrc(gh, head_repo_ref)
         log.debug("lintrc file contents '%s'", lintrc)
     except Exception as e:
-        log.warn("Cannot download .lintrc file for '%s', "
+        log.warning("Cannot download .lintrc file for '%s', "
                  "skipping lint checks.", base_repo_url)
-        log.warn(e)
+        log.warning(e)
         return Response(status=204)
     try:
         log.info("Scheduling pull request for %s/%s %s", user, repo, number)

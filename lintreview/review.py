@@ -18,7 +18,7 @@ class IssueLabel(object):
         try:
             pull_request.remove_label(self.label)
         except Exception:
-            log.warn("Failed to remove label '%s'", self.label)
+            log.warning("Failed to remove label '%s'", self.label)
 
     def publish(self, repo, pull_request):
         self.remove(pull_request)
@@ -27,7 +27,7 @@ class IssueLabel(object):
             repo.ensure_label(self.label)
             pull_request.add_label(self.label)
         except Exception:
-            log.warn("Failed to add label '%s'", self.label)
+            log.warning("Failed to add label '%s'", self.label)
 
 
 class BaseComment(object):
