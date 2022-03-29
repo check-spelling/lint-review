@@ -1,4 +1,4 @@
-FROM python:2.7.16-slim-stretch
+FROM python:3.7.3-slim-stretch
 ENV REFRESHED_AT 2019-03-31
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
