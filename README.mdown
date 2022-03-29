@@ -256,7 +256,7 @@ code using type annotations.
 #### PHPCS
 
 Uses the [phpcs](http://pear.php.net/package/PHP_CodeSniffer) PEAR library
-to do style checks on PHP, Javascript and or CSS files.
+to do style checks on PHP, JavaScript and or CSS files.
 
 *Options*
 
@@ -279,7 +279,7 @@ maintain code.
 
 * `ruleset` The ruleset names or file to use for phpmd. Defaults to `cleancode,codesize,unusedcode`
 
-### Javascript:
+### JavaScript:
 
 #### JSHint
 
