@@ -100,7 +100,7 @@ class TestInit(TestCase):
     def test_apply_fixer_diff__invalid_strategy(self):
         original = Mock()
         changed = Mock()
-        context = {'strategy': 'bad stategy'}
+        context = {'strategy': 'bad strategy'}
         with self.assertRaises(fixers.ConfigurationError) as err:
             fixers.apply_fixer_diff(original, changed, context)
         self.assertIn('Unknown', str(err.exception))
