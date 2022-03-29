@@ -137,7 +137,7 @@ class Pytype(Tool):
             source_dir=self.base_path,
             name=container_name)
 
-        buildlog.info('Creating cusotm image for pytype')
+        buildlog.info('Creating custom image for pytype')
         docker.commit(container_name)
         docker.rm_container(container_name)
 
