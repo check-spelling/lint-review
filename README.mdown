@@ -173,7 +173,7 @@ each tool outlines which options are supported.
 The `[files]` section is optional and allows you to define ignore patterns.
 These patterns are used to find and exclude files when doing a review. Ignore
 patterns use glob expressions to find files. The patterns start at the reviewed
-repository root. If you need to ignore mulitple patterns separate them with new
+repository root. If you need to ignore multiple patterns separate them with new
 lines.
 
 
