@@ -46,7 +46,7 @@ class TestGit(TestCase):
         expected = os.path.realpath(expected)
         self.assertEqual(res, expected)
 
-    def test_get_repo_path__absoulte_dir(self):
+    def test_get_repo_path__absolute_dir(self):
         user = 'markstory'
         repo = 'asset_compress'
         num = 4
