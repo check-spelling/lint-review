@@ -45,7 +45,7 @@ and fine grained access control to repositories via the GitHubApp integration.
 
 ## Installation
 
-You install Lint Review by cloning the repository and installing dependecies,
+You install Lint Review by cloning the repository and installing dependencies,
 or by using docker. If you are not using docker, it is recommended that you use
 `virtualenv` to save shaving yaks down the road.
 
