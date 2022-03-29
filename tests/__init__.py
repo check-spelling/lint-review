@@ -101,7 +101,7 @@ def setup_repo(mock_fetch, mock_checkout):
     if not os.path.exists(git_dir):
         git.clone_or_update(
             {},
-            'git://github.com/markstory/lint-review.git',
+            'https://github.com/markstory/lint-review.git',
             git_dir,
             'master')
 
