@@ -31,7 +31,7 @@ jobs:
     - name: check-spelling
       if: env.MERGE_FAILED != '1'
       id: spelling
-      uses: check-spelling/check-spelling@prerelease
+      uses: jsoref/check-spelling@prerelease
       with:
         experimental_apply_changes_via_bot: 1
         suppress_push_for_open_pull_request: 1
@@ -69,7 +69,7 @@ jobs:
       uses: actions/checkout@v2
       if: ${{ (steps.retrieve.outcome == 'success') || (steps.find.outcome == 'success') }}
     - name: Comment
-      uses: check-spelling/check-spelling@prerelease
+      uses: jsoref/check-spelling@prerelease
       if: ${{ (steps.retrieve.outcome == 'success') || (steps.find.outcome == 'success') }}
       with:
         experimental_apply_changes_via_bot: 1
@@ -92,13 +92,13 @@ jobs:
       cancel-in-progress: false
     steps:
     - name: Get PR Head SHA
-      uses: check-spelling/check-spelling@prerelease
+      uses: jsoref/check-spelling@prerelease
       with:
         custom_task: pr_head_sha
         experimental_path: /tmp
     - name: checkout
       uses: actions/checkout@v2
     - name: check-spelling
-      uses: check-spelling/check-spelling@prerelease
+      uses: jsoref/check-spelling@prerelease
       with:
         experimental_apply_changes_via_bot: 1
