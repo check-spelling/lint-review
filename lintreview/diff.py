@@ -99,7 +99,7 @@ class DiffCollection(object):
         try:
             self._add_diff(content)
         except Exception as e:
-            log.warn('Could not process diff %s. content=%s error=%s',
+            log.warning('Could not process diff %s. content=%s error=%s',
                      str(content),
                      content.patch,
                      e)

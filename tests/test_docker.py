@@ -43,7 +43,7 @@ class TestDocker(TestCase):
         docker.rm_container('test_container')
 
         containers = docker.containers(include_stopped=True)
-        assert 'test_conainer' not in containers
+        assert 'test_container' not in containers
 
     @requires_image('python2')
     def test_images(self):

@@ -46,7 +46,7 @@ class TestGit(TestCase):
         expected = os.path.realpath(expected)
         self.assertEqual(res, expected)
 
-    def test_get_repo_path__absoulte_dir(self):
+    def test_get_repo_path__absolute_dir(self):
         user = 'markstory'
         repo = 'asset_compress'
         num = 4
@@ -66,14 +66,14 @@ class TestGit(TestCase):
     def test_repo_clone_no_repo(self):
         self.assertRaises(IOError,
                           git.clone,
-                          'git://github.com/markstory/it will never work.git',
+                          'https://github.com/markstory/it will never work.git',
                           clone_path)
 
     @pytest.mark.skipif(cant_write_to_test, reason='Cannot write to ./tests skipping')
     def test_repo_operations(self):
         teardown_repo()
         res = git.clone(
-            'git://github.com/markstory/lint-review.git',
+            'https://github.com/markstory/lint-review.git',
             clone_path)
         assert res, 'Cloned successfully.'
         assert git.exists(clone_path), 'Cloned dir should be there.'
@@ -87,7 +87,7 @@ class TestGit(TestCase):
         teardown_repo()
         git.clone_or_update(
             config,
-            'git://github.com/markstory/lint-review.git',
+            'https://github.com/markstory/lint-review.git',
             clone_path,
             'e4f880c77e6b2c81c81cad5d45dd4e1c39b919a0')
         assert git.exists(clone_path)
@@ -177,7 +177,7 @@ class TestGit(TestCase):
         output = git.add_remote(
             clone_path,
             'testing',
-            'git://github.com/markstory/lint-review.git')
+            'https://github.com/markstory/lint-review.git')
         self.assertEqual('', output)
 
     @pytest.mark.skipif(cant_write_to_test, reason='Cannot write to ./tests skipping')
@@ -186,7 +186,7 @@ class TestGit(TestCase):
             git.add_remote(
                 clone_path,
                 'origin',
-                'git://github.com/markstory/lint-review.git')
+                'https://github.com/markstory/lint-review.git')
         self.assertIn('Unable to add remote origin', str(err))
 
     @pytest.mark.skipif(cant_write_to_test, reason='Cannot write to ./tests skipping')

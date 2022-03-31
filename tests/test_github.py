@@ -97,4 +97,4 @@ class TestGithub(TestCase):
                           repo,
                           url)
 
-        repo.hook().delete.asert_called()
+        repo.hook().delete.assert_called()

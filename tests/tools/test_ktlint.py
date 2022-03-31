@@ -100,12 +100,12 @@ class TestKtlint(TestCase):
     @requires_image('ktlint')
     def test_process_files__with_ruleset(self):
         tool = Ktlint(self.problems,
-                      {'ruleset': '/path/to/custom/rulseset.jar'}, root_dir)
+                      {'ruleset': '/path/to/custom/ruleset.jar'}, root_dir)
         self.assertEqual(['ktlint',
                           '--color',
                           '--reporter=checkstyle',
                           '-R',
-                          '/path/to/custom/rulseset.jar'],
+                          '/path/to/custom/ruleset.jar'],
                          tool._create_command())
 
     @requires_image('ktlint')

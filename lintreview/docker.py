@@ -198,7 +198,7 @@ def commit(name, timeout=120):
     # type: (str) -> None
     """Commit a container state into a new images."""
     client = _get_client(timeout=timeout)
-    log.info('Commiting new image for %s', name)
+    log.info('Committing new image for %s', name)
     try:
         container = client.containers.get(name)
         container.commit(repository=name)

@@ -45,12 +45,12 @@ and fine grained access control to repositories via the GitHubApp integration.
 
 ## Installation
 
-You install Lint Review by cloning the repository and installing dependecies,
+You install Lint Review by cloning the repository and installing dependencies,
 or by using docker. If you are not using docker, it is recommended that you use
 `virtualenv` to save shaving yaks down the road.
 
 ```bash
-git clone git://github.com/markstory/lint-review.git
+git clone https://github.com/markstory/lint-review.git
 cd lint-review
 virtualenv env
 source env/bin/activate
@@ -173,7 +173,7 @@ each tool outlines which options are supported.
 The `[files]` section is optional and allows you to define ignore patterns.
 These patterns are used to find and exclude files when doing a review. Ignore
 patterns use glob expressions to find files. The patterns start at the reviewed
-repository root. If you need to ignore mulitple patterns separate them with new
+repository root. If you need to ignore multiple patterns separate them with new
 lines.
 
 
@@ -256,7 +256,7 @@ code using type annotations.
 #### PHPCS
 
 Uses the [phpcs](http://pear.php.net/package/PHP_CodeSniffer) PEAR library
-to do style checks on PHP, Javascript and or CSS files.
+to do style checks on PHP, JavaScript and or CSS files.
 
 *Options*
 
@@ -279,7 +279,7 @@ maintain code.
 
 * `ruleset` The ruleset names or file to use for phpmd. Defaults to `cleancode,codesize,unusedcode`
 
-### Javascript:
+### JavaScript:
 
 #### JSHint
 

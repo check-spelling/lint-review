@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.12
 
 RUN mkdir /tool && mkdir /src
 COPY checkstyle-8.28-all.jar /tool/checkstyle.jar
